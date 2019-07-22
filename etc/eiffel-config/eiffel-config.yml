@@ -387,7 +387,7 @@ eiffel_images:
   - "{{ eiffel_image_fedora_atomic_29 }}"
 #  - "{{ eiffel_image_centos }}"
 #  - "{{ eiffel_image_centos_ib }}"
-#  - "{{ eiffel_image_centos_ohpc }}"
+  - "{{ eiffel_image_centos_ohpc }}"
 
 eiffel_image_centos_upstream:
   name: "CentOS7-1905"
