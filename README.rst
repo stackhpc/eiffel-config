@@ -64,4 +64,4 @@ configuration parameter:
 
 .. code-block::
 
-   $ tools/eiffel-config -- --vault-password-file config-secret.vault 
+   $ tools/eiffel-config -- --vault-password-file ~/.config-secret.vault 
