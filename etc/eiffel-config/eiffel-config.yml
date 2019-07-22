@@ -383,9 +383,27 @@ eiffel_flavor_baremetal_c6420:
 # Software images for eiffel
 
 eiffel_images:
-  - "{{ eiffel_image_centos }}"
-  - "{{ eiffel_image_centos_ib }}"
-  - "{{ eiffel_image_centos_ohpc }}"
+  - "{{ eiffel_image_centos_upstream }}"
+  - "{{ eiffel_image_fedora_atomic_29 }}"
+#  - "{{ eiffel_image_centos }}"
+#  - "{{ eiffel_image_centos_ib }}"
+#  - "{{ eiffel_image_centos_ohpc }}"
+
+eiffel_image_centos_upstream:
+  name: "CentOS7-1905"
+  image_url: "https://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud-1905.qcow2"
+  properties:
+    os_type: "linux"
+    os_distro: "centos"
+    os_version: "7.0"
+
+eiffel_image_fedora_atomic_29:
+  name: "FedoraAtomic29-20190708"
+  image_url: "https://dl.fedoraproject.org/pub/alt/atomic/stable/Fedora-29-updates-20190708.0/AtomicHost/x86_64/images/Fedora-AtomicHost-29-20190708.0.x86_64.qcow2"
+  properties:
+    os_type: "linux"
+    os_distro: "fedora-atomic"
+    os_version: "29"
 
 # Latest CentOS image
 eiffel_image_centos:
