@@ -1,0 +1,45 @@
+---
+###############################################################################
+# Configuration of OpenStack user environment for Eiffel Demo.
+
+# Path to create virtualenv in which to install python dependencies.
+eiffel_venv: "{{ ansible_env.PWD }}/eiffel-config-venv"
+
+# List of OpenStack projects. Format is as required by the stackhpc.os-projects
+# role.
+eiffel_projects: []
+
+###############################################################################
+# Configuration of networks, subnets and routers for Eiffel Demo.
+
+# List of networks in the eiffel project. Format is as required by the
+# stackhpc.os-networks role.
+eiffel_networks: []
+
+# List of routers in the eiffel project. Format is as required by the
+# stackhpc.os-networks role.
+eiffel_routers: []
+
+# List of security groups in the eiffel demo project. Format is as required by the
+# stackhpc.os-networks role.
+eiffel_security_groups: []
+
+###############################################################################
+# Configuration of nova flavors for Eiffel Demo.
+
+# List of nova flavors in the eiffel project. Format is as required by the
+# stackhpc.os-flavors role.
+eiffel_flavors: []
+
+###############################################################################
+# Configuration of glance images for Eiffel Demo.
+
+# List of glance images in the eiffel project. Format is as required by the
+# stackhpc.os-images role.
+eiffel_images: []
+
+# List of additional diskimage-builder elements to incorporate on the path
+eiffel_image_elements: []
+
+# List of diskimage-builder element git repos to pull
+eiffel_image_git_elements: []

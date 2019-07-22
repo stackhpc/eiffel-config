@@ -1,0 +1,15 @@
+---
+- name: Generate Eiffel Demo software images
+  hosts: localhost
+  tags:
+    - images
+  roles:
+    - role: stackhpc.os-images
+      os_images_venv: "{{ eiffel_venv }}"
+      os_images_cache: "{{ ansible_env.PWD }}/eiffel-config-image-cache"
+      os_images_auth_type: "{{ openstack_auth_type }}"
+      os_images_auth: "{{ openstack_auth }}"
+      os_images_cacert: "{{ openstack_cacert }}"
+      os_images_list: "{{ eiffel_images }}"
+      os_images_elements: "{{ eiffel_image_elements }}"
+      os_images_git_elements: "{{ eiffel_image_git_elements }}"

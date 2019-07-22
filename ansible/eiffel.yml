@@ -1,0 +1,6 @@
+---
+# Top level playbook that includes all others.
+- include: eiffel-project.yml
+- include: eiffel-networks.yml
+- include: eiffel-flavors.yml
+- include: eiffel-images.yml
