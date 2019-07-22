@@ -365,55 +365,19 @@ eiffel_security_groups:
 # List of nova flavors in the eiffel demo project. Format is as required by the
 # stackhpc.os-flavors role.
 eiffel_flavors:
-  - "{{ eiffel_flavor_baremetal_A }}"
-  - "{{ eiffel_flavor_m1_tiny }}"
-  - "{{ eiffel_flavor_m1_small }}"
-  - "{{ eiffel_flavor_m1_medium }}"
-  - "{{ eiffel_flavor_m1_large }}"
-  - "{{ eiffel_flavor_m1_xlarge }}"
+  - "{{ eiffel_flavor_baremetal_c6420 }}"
 
 # Bare metal compute node.
-eiffel_flavor_baremetal_A:
-  name: "baremetal-A"
-  ram: 65536
+eiffel_flavor_baremetal_c6420:
+  name: "C6420-Xeon6148-192GB"
+  ram: 196608
   disk: 0
-  vcpus: 64
+  vcpus: 40
   extra_specs:
-    "resources:CUSTOM_BAREMETAL_A": 1
+    "resources:CUSTOM_C6420_XEON6148_192GB": 1
     "resources:VCPU": 0
     "resources:MEMORY_MB": 0
     "resources:DISK_GB": 0
-
-# Virtual machine flavors.
-eiffel_flavor_m1_tiny:
-  name: "m1.tiny"
-  ram: 512
-  disk: 1
-  vcpus: 1
-
-eiffel_flavor_m1_small:
-  name: "m1.small"
-  ram: 2048
-  disk: 20
-  vcpus: 1
-
-eiffel_flavor_m1_medium:
-  name: "m1.medium"
-  ram: 4096
-  disk: 40
-  vcpus: 2
-
-eiffel_flavor_m1_large:
-  name: "m1.large"
-  ram: 8192
-  disk: 40
-  vcpus: 4
-
-eiffel_flavor_m1_xlarge:
-  name: "m1.xlarge"
-  ram: 16384
-  disk: 100
-  vcpus: 8
 
 ###############################################################################
 # Software images for eiffel
