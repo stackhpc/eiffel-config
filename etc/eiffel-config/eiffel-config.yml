@@ -378,6 +378,7 @@ eiffel_flavor_baremetal_c6420:
     "resources:VCPU": 0
     "resources:MEMORY_MB": 0
     "resources:DISK_GB": 0
+    "capabilities:boot_option": "local"
 
 ###############################################################################
 # Software images for eiffel
