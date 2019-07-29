@@ -403,7 +403,7 @@ eiffel_images:
   - "{{ eiffel_image_fedora_atomic_29 }}"
 #  - "{{ eiffel_image_centos }}"
 #  - "{{ eiffel_image_centos_ib }}"
-  - "{{ eiffel_image_centos_ohpc }}"
+  - "{{ eiffel_image_centos_ohpc_uefi }}"
 
 eiffel_image_centos_upstream:
   name: "CentOS7-1905"
@@ -452,9 +452,10 @@ eiffel_image_centos_ib:
     os_version: "7.5"
 
 # Latest CentOS image, with OpenHPC and support for accessing the InfiniBand network.
-eiffel_image_centos_ohpc:
-  name: "CentOS7.5-OpenHPC"
+eiffel_image_centos_ohpc_uefi:
+  name: "CentOS7.5-OpenHPC-UEFI"
   elements:
+    - "block-device-efi"
     - "centos7"
     - "epel"
     - "openhpc"
@@ -471,7 +472,6 @@ eiffel_image_centos_ohpc:
   properties:
     os_distro: "centos"
     os_version: "7.5"
-
 
 # This creates a git checkout in the local user's home directory
 eiffel_image_stackhpc_elements: "{{ ansible_env.PWD }}/stackhpc-image-elements"
