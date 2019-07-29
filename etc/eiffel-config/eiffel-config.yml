@@ -365,11 +365,12 @@ eiffel_security_groups:
 # List of nova flavors in the eiffel demo project. Format is as required by the
 # stackhpc.os-flavors role.
 eiffel_flavors:
-  - "{{ eiffel_flavor_baremetal_c6420 }}"
+  - "{{ eiffel_flavor_baremetal_c6420_bios }}"
+  - "{{ eiffel_flavor_baremetal_c6420_uefi }}"
 
 # Bare metal compute node.
-eiffel_flavor_baremetal_c6420:
-  name: "C6420-Xeon6148-192GB"
+eiffel_flavor_baremetal_c6420_bios:
+  name: "C6420-Xeon6148-192GB-bios"
   ram: 196608
   disk: 0
   vcpus: 40
@@ -378,6 +379,20 @@ eiffel_flavor_baremetal_c6420:
     "resources:VCPU": 0
     "resources:MEMORY_MB": 0
     "resources:DISK_GB": 0
+    "capabilities:boot_mode": "bios"
+    "capabilities:boot_option": "local"
+
+eiffel_flavor_baremetal_c6420_uefi:
+  name: "C6420-Xeon6148-192GB-uefi"
+  ram: 196608
+  disk: 0
+  vcpus: 40
+  extra_specs:
+    "resources:CUSTOM_C6420_XEON6148_192GB": 1
+    "resources:VCPU": 0
+    "resources:MEMORY_MB": 0
+    "resources:DISK_GB": 0
+    "capabilities:boot_mode": "uefi"
     "capabilities:boot_option": "local"
 
 ###############################################################################
