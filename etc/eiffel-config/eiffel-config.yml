@@ -385,8 +385,8 @@ eiffel_flavor_baremetal_c6420:
 # Software images for eiffel
 
 eiffel_images:
-#  - "{{ eiffel_image_centos_upstream }}"
-#  - "{{ eiffel_image_fedora_atomic_29 }}"
+  - "{{ eiffel_image_centos_upstream }}"
+  - "{{ eiffel_image_fedora_atomic_29 }}"
 #  - "{{ eiffel_image_centos }}"
 #  - "{{ eiffel_image_centos_ib }}"
   - "{{ eiffel_image_centos_ohpc_uefi }}"
@@ -397,7 +397,7 @@ eiffel_image_centos_upstream:
   properties:
     os_type: "linux"
     os_distro: "centos"
-    os_version: "7.0"
+    os_version: "7"
 
 eiffel_image_fedora_atomic_29:
   name: "FedoraAtomic29-20190708"
@@ -449,6 +449,8 @@ eiffel_image_centos_ohpc_uefi:
     - "dhcp-all-interfaces"
     - "vm"
     - "systemd-modules-load"
+    - "enable-serial-console"
+    - "growpart"
   env:
     DIB_SYSTEMD_MODULES_LOAD_CONTENT: "{{ eiffel_systemd_modules_load_ipoib }}"
     DIB_YUM_REPO_CONF: "{{ eiffel_cloud_init_0_7_9_25_repo_file }}"
