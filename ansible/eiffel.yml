@@ -4,3 +4,4 @@
 - include: eiffel-networks.yml
 - include: eiffel-flavors.yml
 - include: eiffel-images.yml
+- include: eiffel-container-clusters.yml

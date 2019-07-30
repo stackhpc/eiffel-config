@@ -500,3 +500,21 @@ eiffel_systemd_modules_load_ipoib: |
   ib_ipoib
   # Load the Mellanox IB driver.
   mlx4_ib
+
+eiffel_container_clusters_templates:
+  - "{{ eiffel_container_clusters_template_k8s_14 }}"
+
+eiffel_container_clusters_template_k8s_14:
+  public:
+  floating-ip-disabled:
+  labels: "cgroup_driver=cgroupfs,prometheus_monitoring=true,kube_tag=v1.14.1,cloud_provider_tag=1.14.0"
+  external_network: "provision-net"
+  fixed_network: "provision-net"
+  master_flavor: "C6420-Xeon6148-192-bios"
+  flavor: "C6420-Xeon6148-192-bios"
+  image: "FedoraAtomic29-20190429"
+  name: "kubernetes-1.14"
+  coe: "kubernetes"
+  network_driver: "flannel"
+  docker_storage_driver: "overlay2"
+  server_type: "vm"
