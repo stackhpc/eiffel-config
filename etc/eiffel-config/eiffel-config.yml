@@ -382,7 +382,7 @@ eiffel_flavor_baremetal_c6420:
     "capabilities:boot_mode": "uefi"
     "capabilities:boot_option": "local"
 
-eiffel_flavor_baremetal_c6420i_bios:
+eiffel_flavor_baremetal_c6420_bios:
   name: "C6420-Xeon6148-192-bios"
   ram: 196608
   disk: 0
@@ -412,6 +412,7 @@ eiffel_image_centos_upstream:
     os_type: "linux"
     os_distro: "centos"
     os_version: "7"
+    hw_firmware_type: "bios"
 
 eiffel_image_fedora_atomic_29:
   name: "FedoraAtomic29-20190708"
@@ -420,6 +421,7 @@ eiffel_image_fedora_atomic_29:
     os_type: "linux"
     os_distro: "fedora-atomic"
     os_version: "29"
+    hw_firmware_type: "bios"
 
 # Latest CentOS image
 eiffel_image_centos:
