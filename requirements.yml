@@ -3,3 +3,4 @@
 - src: stackhpc.os-networks
 - src: stackhpc.os-projects
 - src: stackhpc.os-images
+- src: stackhpc.os-container-clusters
