@@ -366,6 +366,7 @@ eiffel_security_groups:
 # stackhpc.os-flavors role.
 eiffel_flavors:
   - "{{ eiffel_flavor_baremetal_c6420 }}"
+  - "{{ eiffel_flavor_baremetal_c6420_bios }}"
 
 # Bare metal compute node.
 eiffel_flavor_baremetal_c6420:
@@ -379,6 +380,19 @@ eiffel_flavor_baremetal_c6420:
     "resources:MEMORY_MB": 0
     "resources:DISK_GB": 0
     "capabilities:boot_mode": "uefi"
+    "capabilities:boot_option": "local"
+
+eiffel_flavor_baremetal_c6420i_bios:
+  name: "C6420-Xeon6148-192-bios"
+  ram: 196608
+  disk: 0
+  vcpus: 40
+  extra_specs:
+    "resources:CUSTOM_C6420_XEON6148_192GB": 1
+    "resources:VCPU": 0
+    "resources:MEMORY_MB": 0
+    "resources:DISK_GB": 0
+    "capabilities:boot_mode": "bios"
     "capabilities:boot_option": "local"
 
 ###############################################################################
